@@ -5,7 +5,7 @@ const db = new menuDAO();
 db.init();
 
 exports.show_login = function (req, res) {
-  res.render("user/login");
+  res.render("user/logIn");
 };
 
 exports.handle_login = function (req, res) {
