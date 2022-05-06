@@ -5,7 +5,6 @@ const {login} = require('../auth/auth')
 const {verify} = require('../auth/auth')
 
 router.get('/login', controller.show_login);
-
 router.post('/login', login, controller.handle_login);
 router.get('/', function(req, res) {
     res.redirect('/home.html');
@@ -37,11 +36,9 @@ router.use(function(req, res) {
         res.redirect('/404.html');
        
     });
-    
 router.use(function(err, req, res, next) {
         res.status(500);
         res.type('text/plain');
-        res.redirect('/500.html');
+        res.send('Internal Server Error.');
     });
-    
 module.exports = router;
