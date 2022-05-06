@@ -5,6 +5,7 @@ const {login} = require('../auth/auth')
 const {verify} = require('../auth/auth')
 
 router.get('/login', controller.show_login);
+
 router.post('/login', login, controller.handle_login);
 router.get('/', function(req, res) {
     res.redirect('/home.html');
