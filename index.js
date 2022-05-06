@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 require('dotenv').config() // loads data from .env file
 
+const PORT = process.env.PORT || 3001;
 const cookieParser = require('cookie-parser')
 app.use(cookieParser())
 
@@ -22,10 +23,10 @@ app.set('view engine', 'mustache');
 const router = require('./routes/menuRoutes');
 app.use('/', router);
 
-const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`);
-});
+    console.log(`Server listening on ${PORT}`);
+  });
+  
 
 
 
