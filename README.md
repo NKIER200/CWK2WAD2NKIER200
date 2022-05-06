@@ -1,5 +1,7 @@
 In order to download and use the code you should clone the repository. Type the following command to download the project from a remote server to the folder you are currently in locally
 git clone https://github.com/NKIER200/CWK2WAD2NKIER200
+or
+git clone https://github.com/NKIER200/wadcw2
 Use cd to move to the root directory of the cloned project, npm install to get the node dependancies set up then run the project by typing node index.
 
 The website can then be accessed via http://localhost:3000/
