@@ -1,0 +1,45 @@
+<html>
+<head>
+  {{>header}}
+</head>
+<body>
+<br>
+<h1>{{title}}</h1>
+</div>
+{{#entries}}
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">{{dishName}}</h4>
+   
+     <p class="card-text">
+      {{dishAvailability}}
+     </p>
+     <p class="card-text">
+      {{description}}
+     </p>
+     <p class="card-text">
+      {{mealType}}
+     </p>
+     <p class="card-text">
+      {{ingredients}}
+     </p>
+     <p class="card-text">
+      {{menu}}
+     </p>
+     <p class="card-text">
+      {{allergens}}
+     </p>
+     <p class="card-text">
+      {{price}}
+     </p>
+<div class="card-footer">
+  <p>prepared for {{menu}}</a> by the award winning Alan Kier. Is a {{mealType}}</p>
+</div>
+</div>
+{{/entries}}
+
+{{^entries}}
+  No entries yet.
+{{/entries}}
+</body>
+</html>

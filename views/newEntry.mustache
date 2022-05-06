@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+{{>header}}
+</head>
+<body class="container">
+
+<h2>Write a new entry for the menu</h2>
+     <ul class="navbar-nav ms-auto mb-1 mb-lg-0">
+              <li class="nav-item-2">
+                <a class="nav-link-2" href="/newEntry">Add Dish</a>
+
+            <li class="nav-item-4">
+                <a class="nav-link-4" href="/hideItem">Hide Dish</a>
+            </li>
+           
+    </ul>
+<div class="text-right" style="margin-bottom: 1em;">
+{{^user}}
+  <a id="login" href="/register" class="btn btn-primary">
+    Register
+  </a>
+  <a id="login" href="/login" class="btn btn-primary">
+    Sign in
+  </a>
+{{/user}}
+{{#user}}
+
+  <a id="logout" href="/logout" class="btn btn-primary">
+    Sign out
+  </a>
+{{/user}}
+</div>
+<form method="post" role="form" action="/new">
+<div class="form-group">
+<label for="menu">Menu Type</label>
+<input type="text" class="form-control" id="menu"
+name="menu" placeholder="What Menu is the item on"
+required>
+</div>
+<div class="form-group">
+<label for="_id">_id</label>
+<input type="text" class="form-control" id="_id"
+name="_id" placeholder="Enter itemId"
+required>
+</div>
+<div class="form-group">
+<label for="dishName">Dishname</label>
+<input type="text" class="form-control" id="dishName"
+name="dishName" placeholder="Enter a dish name"
+required>
+</div>
+<div class="form-group">
+ <label for="dishAvailability">dish Availability (on or off)</label>           
+<input type="text" class="form-control" id="dishAvailability" name="dishAvailability"
+placeholder="Enter availability." required>
+          </div>
+<div class="form-group">
+<label for="desc">Description</label>
+<input type="text" class="form-control" id="description" name="description"
+placeholder="Enter description." required>
+</div>
+<div class="form-group">
+<label for="mealType">mealType</label>
+<input type="text" class="form-control" id="mealType"
+name="mealType" placeholder="Enter a meal type"
+required>
+</div>
+<div class="form-group">
+<label for="ingredients">Ingredients</label>
+<input type="text" class="form-control" id="ingredients" name="ingredients"
+placeholder="Enter ingredients." 
+required>
+
+<div class="form-group">
+<label for="allergens">Allergens</label>
+<input type="text" class="form-control" id="allergens" name="allergens"
+placeholder="Enter allergens." 
+required>
+
+</div>
+<div class="form-group">
+<label for="price">Price</label>
+<input type="text" class="form-control" id="price"
+name="price" placeholder="Enter a price"
+required>
+</div>
+</div>
+<div class="form-group">
+<input type="submit" value="Post entry" class="btn btn-primary">
+</div>
+</form>
+
+</body>
+</html>
