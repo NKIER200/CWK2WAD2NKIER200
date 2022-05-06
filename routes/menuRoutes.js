@@ -37,9 +37,11 @@ router.use(function(req, res) {
         res.redirect('/404.html');
        
     });
+    /*
 router.use(function(err, req, res, next) {
         res.status(500);
         res.type('text/plain');
         res.redirect('/500.html');
     });
+    */
 module.exports = router;
