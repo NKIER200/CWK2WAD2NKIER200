@@ -1,11 +1,11 @@
-const menuDAO = require("../models/menuModel");
+const menuDAO = require("../models/menuModel.js");
 const userDao = require("../models/userModel.js");
 
 const db = new menuDAO();
 db.init();
 
 exports.show_login = function (req, res) {
-  res.render("login");
+  res.render("user/login");
 };
 
 exports.handle_login = function (req, res) {
