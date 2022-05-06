@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 require('dotenv').config() // loads data from .env file
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 const cookieParser = require('cookie-parser')
 app.use(cookieParser())
 

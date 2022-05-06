@@ -5,22 +5,16 @@ const db = new menuDAO();
 db.init();
 
 exports.show_login = function (req, res) {
-  res.render("user/login");
+  res.render("login");
 };
 
 exports.handle_login = function (req, res) {
-  db.getAllmenus()
-    .then((list) => {
-      res.render("newEntry", {
-        title: "Login",
-        user: "user",
-        menus: list,
-      });
-    })
-    .catch((err) => {
-      console.log("promise rejected", err);
-    });
+  res.render("newEntry", {
+    title: "New Entry",
+    user: "user"
+  });
 };
+
 exports.landing_page = function (req, res) {
   db.getLunchEntries()
     .then((list) => {
